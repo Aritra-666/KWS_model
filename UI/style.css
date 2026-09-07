@@ -1,0 +1,269 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f1117;
+    color: #e0e0e0;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ===== MAIN ===== */
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== TOP BAR ===== */
+.topbar {
+    background-color: #161821;
+    border-bottom: 1px solid #2a2d3a;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.status-online {
+    color: #34d399;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.status-offline {
+    color: #f87171;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.date-time {
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex: 1;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-side {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background-color: #1a1d28;
+    border: 1px solid #2a2d3a;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-top h3 {
+    margin-bottom: 0;
+}
+
+.tag {
+    font-size: 10px;
+    color: #666;
+    border: 1px solid #333;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+/* ===== MIC AREA ===== */
+.mic-area {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.mic-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(52, 211, 153, 0.1);
+    border: 2px solid rgba(52, 211, 153, 0.3);
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.mic-area h2 {
+    font-size: 22px;
+    color: white;
+}
+
+.mic-area p {
+    font-size: 13px;
+    color: #888;
+    margin-top: 5px;
+}
+
+/* ===== PIPELINE ===== */
+.pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #333;
+    border: 2px solid #444;
+}
+
+.green-dot {
+    background-color: #34d399;
+    border-color: #34d399;
+}
+
+.step span {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+}
+
+.active-step span {
+    color: #34d399;
+    font-weight: bold;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+.line-active {
+    background-color: #34d399;
+}
+
+/* ===== TRANSCRIPT ===== */
+.transcript-box {
+    background-color: #12141c;
+    border: 1px solid #2a2d3a;
+    border-radius: 8px;
+    padding: 15px;
+    color: #666;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+
+/* ===== DEVICE TABLE ===== */
+.device-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.device-table td {
+    padding: 10px 5px;
+    border-bottom: 1px solid #2a2d3a;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.device-table tr:last-child td {
+    border-bottom: none;
+}
+
+.device-table td:last-child {
+    text-align: right;
+}
+
+.badge-green {
+    background-color: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.badge-gray {
+    background-color: #232636;
+    color: #666;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+/* ===== PERFORMANCE TABLE ===== */
+.perf-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.perf-table td {
+    padding: 10px 5px;
+    border-bottom: 1px solid #2a2d3a;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.perf-table tr:last-child td {
+    border-bottom: none;
+}
+
+.perf-table td:last-child {
+    text-align: right;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.green-text {
+    color: #34d399;
+}
+
+.yellow-text {
+    color: #fbbf24;
+}
+

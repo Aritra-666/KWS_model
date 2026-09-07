@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Activator Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Main Area -->
+    <div class="main">
+
+        <!-- Top Bar -->
+        <div class="topbar">
+            <div id="system-status" class="status-online">🟢 System Online</div>
+            <div id="date-time" class="date-time">Mar 25, 2025 &nbsp;&nbsp; 14:32:18</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <!-- Left Side -->
+            <div class="left-side">
+
+                <!-- System Status -->
+                <div class="card">
+                    <div class="card-top">
+                        <h3>⚙️ System Status</h3>
+                        <span class="tag">VOICE ACTIVATOR</span>
+                    </div>
+
+                    <div class="mic-area">
+                        <div class="mic-circle">🎤</div>
+                        <h2 id="state-label">Listening...</h2>
+                        <p id="state-subtext">Waiting for keyword</p>
+                    </div>
+
+                    <div class="pipeline">
+                        <div class="step active-step" data-step="listening">
+                            <div class="dot green-dot"></div>
+                            <span>Listening</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-step="keyword_detected">
+                            <div class="dot"></div>
+                            <span>Keyword Detected</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-step="streaming">
+                            <div class="dot"></div>
+                            <span>Streaming to Server</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-step="processing">
+                            <div class="dot"></div>
+                            <span>Processing (ASR)</span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="step" data-step="transcript_ready">
+                            <div class="dot"></div>
+                            <span>Transcript Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Transcript -->
+                <div class="card">
+                    <div class="card-top">
+                        <h3>💬 Live Transcript</h3>
+                        <span id="transcript-status">⚫ Idle</span>
+                    </div>
+                    <div id="transcript-text" class="transcript-box">
+                        Transcript will appear here...
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Right Side -->
+            <div class="right-side">
+
+                <!-- Device Status -->
+                <div class="card">
+                    <h3>📱 Device Status</h3>
+
+                    <table class="device-table">
+                        <tr>
+                            <td>📱 Device</td>
+                            <td id="device-name">ESP32-S3</td>
+                            <td><span id="device-badge" class="badge-green">Online</span></td>
+                        </tr>
+                        <tr>
+                            <td>📶 Wi-Fi</td>
+                            <td id="wifi-value">Connected</td>
+                            <td><span id="wifi-badge" class="badge-green">Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>🎤 Microphone</td>
+                            <td id="mic-value">Active</td>
+                            <td><span id="mic-badge" class="badge-green">On</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔌 Power</td>
+                            <td id="power-value">USB Powered</td>
+                            <td><span class="badge-gray">-</span></td>
+                        </tr>
+                        <tr>
+                            <td>🕐 Uptime</td>
+                            <td id="uptime-value"></td>
+                            <td><span class="badge-gray">-</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Performance -->
+                <div class="card">
+                    <h3>📈 Performance</h3>
+
+                    <table class="perf-table">
+                        <tr>
+                            <td>Handoff Latency (T1 - T0)</td>
+                            <td id="perf-handoff" class="green-text"></td>
+                        </tr>
+                        <tr>
+                            <td>First Transcript (T2 - T0)</td>
+                            <td id="perf-first" class="green-text"></td>
+                        </tr>
+                        <tr>
+                            <td>Final Transcript (T3 - T0)</td>
+                            <td id="perf-final" class="yellow-text"></td>
+                        </tr>
+                        <tr>
+                            <td>CPU Usage (Idle)</td>
+                            <td id="perf-cpu" class="green-text"></td>
+                        </tr>
+                        <tr>
+                            <td>RAM Usage</td>
+                            <td id="perf-ram" class="yellow-text"></td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
